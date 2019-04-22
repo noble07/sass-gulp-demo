@@ -12,6 +12,16 @@
     "browser-sync": "^2.18.2",
     "gulp": "^3.9.1",
     "gulp-autoprefixer": "^3.1.1",
-    "gulp-sass": "^2.3.2"
-  }
+    "gulp-sass": "^4.0.2",
+    "node-sass": "^4.11.0"
+  },
+  "dependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/noble07/sass-gulp-demo.git"
+  },
+  "bugs": {
+    "url": "https://github.com/noble07/sass-gulp-demo/issues"
+  },
+  "homepage": "https://github.com/noble07/sass-gulp-demo#readme"
 }
