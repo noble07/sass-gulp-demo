@@ -20,18 +20,48 @@ h1, h2, h3, h4, h5, h6 {
     .container {
       width: 1000px; } }
 
-#contenido-principal {
-  box-sizing: border-box;
-  padding-right: 40px; }
-  @media only screen and (min-width: 768px) {
-    #contenido-principal {
-      width: 66.7%;
-      float: left; } }
+.row::after {
+  content: "";
+  display: table;
+  clear: both; }
 
 @media only screen and (min-width: 768px) {
-  aside {
-    width: 33.3%;
-    float: right; } }
+  .row {
+    margin: 0 -1em; } }
+
+[class*='col-'] {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  float: left;
+  padding: 1em;
+  width: 100%; }
+
+@media only screen and (min-width: 768px) {
+  .col-1 {
+    width: 8.33333%; }
+  .col-2 {
+    width: 16.66667%; }
+  .col-3 {
+    width: 25%; }
+  .col-4 {
+    width: 33.33333%; }
+  .col-5 {
+    width: 41.66667%; }
+  .col-6 {
+    width: 50%; }
+  .col-7 {
+    width: 58.33333%; }
+  .col-8 {
+    width: 66.66667%; }
+  .col-9 {
+    width: 75%; }
+  .col-10 {
+    width: 83.33333%; }
+  .col-11 {
+    width: 91.66667%; }
+  .col-12 {
+    width: 100%; } }
 
 .navegacion {
   padding: 10px;
@@ -144,7 +174,7 @@ table {
     max-width: 100%;
     border-radius: 10px; }
 
-.btn, .btn-verde {
+.btn, .btn-verde, .servicios-lista li .btn-servicio {
   border-radius: 5px;
   display: block;
   background-color: #f20701;
@@ -156,9 +186,9 @@ table {
   font-size: 1rem;
   transition: all .3s ease; }
   @media only screen and (min-width: 768px) {
-    .btn, .btn-verde {
+    .btn, .btn-verde, .servicios-lista li .btn-servicio {
       display: inline-block; } }
-  .btn:hover, .btn-verde:hover {
+  .btn:hover, .btn-verde:hover, .servicios-lista li .btn-servicio:hover {
     background-color: #bf0501; }
 
 .btn-verde {
@@ -180,3 +210,19 @@ table {
   .noticia p {
     font-size: 1rem;
     color: #eee8d6; }
+
+.servicios-lista {
+  list-style-type: none;
+  padding: 0; }
+  .servicios-lista li {
+    text-align: center; }
+    .servicios-lista li p {
+      color: #eee8d6; }
+    .servicios-lista li h3 {
+      margin: 0; }
+    .servicios-lista li .btn-servicio {
+      background-color: #ffba00;
+      color: #101068;
+      font-weight: bold; }
+      .servicios-lista li .btn-servicio:hover {
+        color: #eee8d6; }

@@ -24,18 +24,24 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 
-#contenido-principal {
-  box-sizing: border-box;
-  padding-right: 40px;
-  @include tablet{
-    width: 66.7%;
-    float: left;
+.row {
+  @include clearfix;
+  @include tablet {
+    margin: 0 -1em;
   }
 }
 
-aside {
-  @include tablet{
-    width: 33.3%;
-    float: right;
+[class*='col-'] {
+  @include border-box;
+  float: left;
+  padding: 1em;
+  width: 100%;
+}
+
+@include tablet {
+  @for $i from 1 through $numero-columnas {
+    .col-#{$i} {
+      width: 100% / $numero-columnas * $i;
+    }
   }
 }
